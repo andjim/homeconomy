@@ -1,11 +1,9 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 server = Flask(__name__)
+
 server.env = 'development'
+server.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./test.db'
 
-@server.route('/')
-def home():
-    return '<h1>Homeconomy!</h1>'
-
-if __name__ == '__main__':
-    server.run(debug=True)
+db = SQLAlchemy(server)
