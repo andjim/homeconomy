@@ -1,4 +1,4 @@
-from homeconomy.server import  db
+from src.server import  db
 
 class User(db.Model):
     __tablename__ = 'user'

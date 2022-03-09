@@ -1,1 +1,1 @@
-web: gunicorn homeconomy.__main__:server
+web: gunicorn src.__main__:server
